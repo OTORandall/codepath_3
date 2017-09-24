@@ -6,38 +6,40 @@ Time spent: 12 hours spent in total
 
 The following **required** functionality is completed:
 
-1\. [*]  Required: Test for initial vulnerabilities
+1\. Required: Test for initial vulnerabilities
 
-2\. [*]  Required: Configure sessions
-  * [*]  Required: Only allow session IDs to come from cookies
-  * [*]  Required: Expire after one day
-  * [*]  Required: Use cookies which are marked as HttpOnly
+
+
+2\. Required: Configure sessions
+  * [x]  Required: Only allow session IDs to come from cookies
+  * [x]  Required: Expire after one day
+  * [x]  Required: Use cookies which are marked as HttpOnly
 
 3\. [*]  Required: Complete Login page.
-  * [*]  Required: Show an error message when username is not found.
-  * [*]  Required: Show an error message when username is found but password does not match.
-  * [*]  Required: After login, store user ID in session data.
-  * [*]  Required: After login, store user last login time in session data.
-  * [*]  Required: Regenerate the session ID at the appropriate point.
+  * [x]  Required: Show an error message when username is not found.
+  * [x]  Required: Show an error message when username is found but password does not match.
+  * [x]  Required: After login, store user ID in session data.
+  * [x]  Required: After login, store user last login time in session data.
+  * [x]  Required: Regenerate the session ID at the appropriate point.
 
 4\. [*]  Required: Require login to access staff area pages.
-  * [*]  Required: Add a login requirement to *almost all* staff area pages.
-  * [*]  Required: Write code for `last_login_is_recent()`.
+  * [x]  Required: Add a login requirement to *almost all* staff area pages.
+  * [x]  Required: Write code for `last_login_is_recent()`.
 
 5\. [*]  Required: Complete Logout page.
-  * [*]  Required: Add code to destroy the user's session file after logging out.
+  * [x]  Required: Add code to destroy the user's session file after logging out.
 
 6\. [*]  Required: Add CSRF protections to the state forms.
-  * [*]  Required: Create a CSRF token.
-  * [*]  Required: Add CSRF tokens to forms.
-  * [*]  Required: Compare tokens against the stored version of the token.
-  * [*]  Required: Only process forms data sent by POST requests.
-  * [*]  Required: Confirm request referer is from the same domain as the host.
-  * [*]  Required: Store the CSRF token in the user's session.
-  * [*]  Required: Add the same CSRF token to the login form as a hidden input.
-  * [*]  Required: When submitted, confirm that session and form tokens match.
-  * [*]  Required: If tokens do not match, show an error message.
-  * [*]  Required: Make sure that a logged-in user can use pages as expected.
+  * [x]  Required: Create a CSRF token.
+  * [x]  Required: Add CSRF tokens to forms.
+  * [x]  Required: Compare tokens against the stored version of the token.
+  * [x]  Required: Only process forms data sent by POST requests.
+  * [x]  Required: Confirm request referer is from the same domain as the host.
+  * [x]  Required: Store the CSRF token in the user's session.
+  * [x]  Required: Add the same CSRF token to the login form as a hidden input.
+  * [x]  Required: When submitted, confirm that session and form tokens match.
+  * [x]  Required: If tokens do not match, show an error message.
+  * [x]  Required: Make sure that a logged-in user can use pages as expected.
   
 7\. [*]  Required: Ensure the application is not vulnerable to XSS attacks.
 
@@ -49,25 +51,25 @@ The following **required** functionality is completed:
 The following advanced user stories are optional:
 
 * [*]  Bonus Objective 1: Identify security flaw in Objective #4 (requiring login on staff pages)
-  * [*]  Identify the security principal not being followed.
-  * [*]  Write a short description of how the code could be modified to be more secure.
+  * [x]  Identify the security principal not being followed.
+  * [x]  Write a short description of how the code could be modified to be more secure.
          Answer: The codes in the login.php does not meet the principle Security through obscurity because when the user
                  enter the wrong information, the error output will specifically tell the user which part of the input is 
                  wrong, which is against the principle because it will be safer to just show the user that the input is 
                  wrong but not tell which part is wrong, thus increasing obscurity. 
 
-* [*] Bonus Objective 2: Add CSRF protections to all forms in the staff directory
+* [x] Bonus Objective 2: Add CSRF protections to all forms in the staff directory
 
-* [*]  Bonus Objective 3: CSRF tokens only valid for 10 minutes.
+* [x]  Bonus Objective 3: CSRF tokens only valid for 10 minutes.
 
-* [*]  Bonus Objective 4: Sessions are valid only if user-agent string matches previous value.
+* [x]  Bonus Objective 4: Sessions are valid only if user-agent string matches previous value.
 
 * [*]  Advanced Objective: Set/Get Signed-Encrypted Cookie
-  * [*]  Create "public/set\_secret\_cookie.php".
-  * [*]  Create "public/get\_secret\_cookie.php".
-  * [*]  Encrypt and sign cookie before storing.
-  * [*]  Verify cookie is signed correctly or show error message.
-  * [*]  Decrypt cookie.
+  * [x]  Create "public/set\_secret\_cookie.php".
+  * [x]  Create "public/get\_secret\_cookie.php".
+  * [x]  Encrypt and sign cookie before storing.
+  * [x]  Verify cookie is signed correctly or show error message.
+  * [x]  Decrypt cookie.
 
 ## Video Walkthrough
 
